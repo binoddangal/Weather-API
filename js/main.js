@@ -1,6 +1,6 @@
 const KEY = 'eb6882012e9abe0610f6e7d588edd9ef';
 const URL = 'https://api.openweathermap.org/data/2.5/';
-const DEGREE = '273.15';
+const arae = 'KATHMANDU';
 
 const area = document.getElementById('area');
 const temperature = document.getElementById('temperature');
@@ -31,7 +31,9 @@ function getResult (query) {
         description.innerHTML = '"'+data.weather[0].description+'"';
         const Icon = data.weather[0].icon;
         icon.src = 'http://openweathermap.org/img/wn/'+Icon+'@2x.png';
+        
     })
+    .catch(err => alert("Wrong city name!"));
 }
 
 // const area = document.getElementById('area');
